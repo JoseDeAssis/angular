@@ -1,0 +1,16 @@
+<div class="row">
+  <app-list-box (pessoa) = "pessoaId"></app-list-box>
+  <div class="col-md-7">
+    <!-- <app-input-dados-pessoa *ngIf = "pessoaSelecionada"></app-input-dados-pessoa  > -->
+      <label>Matricula</label>
+      <input type="text" class="form-control" #inputMatricula disabled>
+      <label>Nome</label>
+      <input type="text" class="form-control" #inputNome disabled>
+      <label>Salario</label>
+      <input type="text" class="form-control" #inputSalario disabled>
+    </div>
+    
+    <div class="col-xs-5">
+      <button class="btn btn-warning" (click) = "alterarPessoa()">Alterar</button>
+    </div>
+  </div>

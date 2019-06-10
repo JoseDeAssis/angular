@@ -12,7 +12,8 @@ export class ContatosListagemComponent implements OnInit {
 
   contatos: any[];
 
-  constructor(private contatoService: ContatoService) { }
+  constructor(private contatoService: ContatoService) {
+   }
 
   ngOnInit() {
   }
