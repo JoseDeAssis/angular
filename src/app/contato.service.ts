@@ -12,12 +12,6 @@ export class ContatoService {
 
   constructor(private http: HttpClient) { }
 
-  listaPessoa = [ 
-    {id: '1', nome: 'Jon snow', salario: 15000},
-    {id: '2', nome: 'José Maria', salario: 1400},
-    {id: '3', nome: 'Arya', salario: 15000}
-  ]
-
   listar(): Observable<any[]> {
     return this.http.get<any[]>(this.contatosUrl);
   }
@@ -31,6 +25,10 @@ export class ContatoService {
   }
 
   alterarPessoa(filtro): Observable<any> {
+    return this.http.post<any>(this.contatosUrl, filtro);
+  }
+
+  transferirDados(filtro): Observable<any> { 
     return this.http.post<any>(this.contatosUrl, filtro);
   }
 }

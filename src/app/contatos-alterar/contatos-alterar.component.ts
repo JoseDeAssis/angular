@@ -9,7 +9,6 @@ import { TrocaDadosService } from '../troca-dados.service';
 })
 export class ContatosAlterarComponent implements OnInit {
 
-  pessoa;
   @ViewChild("inputMatricula", {static: false}) inputMatricula: ElementRef;
   @ViewChild("inputNome", {static: false}) inputNome: ElementRef;
   @ViewChild("inputSalario", {static: false}) inputSalario: ElementRef;
@@ -21,7 +20,6 @@ export class ContatosAlterarComponent implements OnInit {
   }
   
   alterarPessoa() {
-    console.log(this.pessoa);
-    this.trocaDadosService.alterar(this.pessoa);
+    this.trocaDadosService.alterar();
   }
 }

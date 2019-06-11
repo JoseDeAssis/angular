@@ -1,14 +1,14 @@
 <div class="row">
-  <app-list-box (pessoaId) = "pessoa = $event"></app-list-box>
-  <div class="col-md-7">
-    <!-- <app-input-dados-pessoa *ngIf = "pessoaSelecionada"></app-input-dados-pessoa  > -->
-      <!-- <label>Matricula</label>
+  <app-list-box (pessoa) = "pessoa = $event"></app-list-box>
+  <!-- <div class="col-md-7">
+    <app-input-dados-pessoa *ngIf = "pessoaSelecionada"></app-input-dados-pessoa  >
+      <label>Matricula</label>
       <input type="text" class="form-control" [(ngModel)] = "inputMatricula" disabled>
       <label>Nome</label>
       <input type="text" class="form-control" #inputNome disabled>
       <label>Salario</label>
-      <input type="text" class="form-control" #inputSalario disabled> -->
-    </div>
+      <input type="text" class="form-control" #inputSalario disabled>
+    </div> -->
     
     <div class="col-xs-5">
       <button class="btn btn-warning" (click) = "alterarPessoa()">Alterar</button>

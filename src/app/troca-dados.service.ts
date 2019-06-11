@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   })
 export class TrocaDadosService {
     pessoa: {id: string, nome: string, salario: number};
+    pessoaAlterada;
     viewAlterar = false;
     salarioAlterado: number;
     nomeAlterado: number;
@@ -17,19 +18,27 @@ export class TrocaDadosService {
         this.pessoa = pessoaSelecionada;
     }
 
-    dadosAlterar() {
-        const pessoa = {
-            id: this.pessoa.id,
-            salario: this.salarioAlterado,
-            nome: this.nomeAlterado,
+    dadosAlterar(pessoa: {id: string, nome: string, salario: number}) {
+        this.pessoaAlterada = {
+            id: pessoa.id,
+            salario: pessoa.salario,
+            nome: pessoa.nome,
             operacao: "alterar"
         }
     }
+
+    deletar() { 
+        const pessoaDeletar = {
+            id: this.pessoa.id,
+            operacao: "deletar"
+        }
+        this.contatoService.deletarPessoa(pessoaDeletar).subscribe(res => {
+            alert("Pessoa deletada com sucesso!");
+        })
+    }
     
-    alterar(pessoaAlterada) {
-        this.pessoa.nome = pessoaAlterada.nome;
-        this.pessoa.salario = pessoaAlterada.salario;
-        this.contatoService.alterarPessoa(this.pessoa).subscribe(()=> {
+    alterar() {
+        this.contatoService.alterarPessoa(this.pessoaAlterada).subscribe(res => {
             alert("Usuário alterado!");
         })
     }

@@ -13,6 +13,7 @@ import { ListBoxComponent } from './list-box/list-box.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TrocaDadosService } from './troca-dados.service';
 import { inputDadosPessoaComponent } from './list-box/input-dados-pessoa/input-dados-pessoa.component';
+import { InputTrocaDadosComponent } from './input-troca-dados/input-troca-dados.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { inputDadosPessoaComponent } from './list-box/input-dados-pessoa/input-d
     ContatosDeletarComponent,
     ContatosAlterarComponent,
     ListBoxComponent,
-    inputDadosPessoaComponent
+    inputDadosPessoaComponent,
+    InputTrocaDadosComponent
   ],
   imports: [
     BrowserModule,

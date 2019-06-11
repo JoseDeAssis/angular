@@ -19,17 +19,15 @@ export class ListBoxComponent implements OnInit {
   constructor(private contatoService: ContatoService, private trocaDadosService: TrocaDadosService) { }
   
   ngOnInit() {
-    // this.contatoService.listar().subscribe(lista => {
-    //   this.listaPessoas = lista;
-    // })
-    this.listaPessoas = this.contatoService.listaPessoa;
+    this.contatoService.listar().subscribe(lista => {
+      this.listaPessoas = lista;
+    })
   }
   
   elementoSelecionado(id: string) {
     this.listaPessoas.forEach(pessoa => {
       if(pessoa.id === id){
         this.trocaDadosService.selecionaPessoa(pessoa);
-        this.pessoaId.emit(pessoa.id);
         this.pessoaSelecionada = true;
       }
     });

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { ContatoService } from '../contato.service';
+import { TrocaDadosService } from '../troca-dados.service';
 
 @Component({
   selector: 'app-contatos-deletar',
@@ -12,9 +13,10 @@ export class ContatosDeletarComponent implements OnInit {
   
   @ViewChild("listBox", {static:false}) listBox: ElementRef;
   
-  constructor(private contatoService: ContatoService) { }
+  constructor(private contatoService: ContatoService, private trocaDadosService: TrocaDadosService) { }
   
   ngOnInit() {
+    this.trocaDadosService.viewAlterar = false;
   }
   
   elementoSelecionado(pessoa: any) {
@@ -22,12 +24,6 @@ export class ContatosDeletarComponent implements OnInit {
   }
   
   deletarPessoa() {
-    const pessoa = {
-      id: this.elementoPessoa.id,
-      operacao: "deletar"
-    }
-    this.contatoService.deletarPessoa(pessoa).subscribe(()=> {
-      alert("Usuário deletado!");
-    })
+   this.trocaDadosService.deletar();
   }
 }
