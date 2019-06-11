@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-md-7">
         <label>Matricula</label>
-        <input type="text" class="form-control" #inputMatricula disabled>
+        <input type="text" class="form-control" [(ngModel)] = 'pessoa.id' disabled>
         <label>Nome</label>
-        <input type="text" class="form-control" #inputNome disabled>
+        <input type="text" class="form-control" [(ngModel)] = 'nomeAlterado' #inputNome disabled>
         <label>Salario</label>
-        <input type="text" class="form-control" #inputSalario disabled>
+        <input type="number" class="form-control" [(ngModel)] = 'salarioAlterado' #inputSalario disabled>
     </div>
 </div>

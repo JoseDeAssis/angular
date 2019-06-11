@@ -2,17 +2,17 @@
   <div class="col-md-12">
     <div class="col-md-5">
       <select multiple #listBox>
-        <option *ngFor="let pessoa of listaPessoas" (click) = "elementoSelecionado(pessoa.id)">{{ pessoa.nome }}</option>
+        <option *ngFor="let pessoa of listaPessoas" (click)="elementoSelecionado(pessoa.id)">{{ pessoa.nome }}</option>
       </select>
     </div>
-    <!-- <div class="col-md-7">
-      <app-input-dados-pessoa *ngIf = "pessoaSelecionada"></app-input-dados-pessoa  >
-        <label>Matricula</label>
-        <input type="text" class="form-control" #inputMatricula disabled>
-        <label>Nome</label>
-        <input type="text" class="form-control" #inputNome disabled>
-        <label>Salario</label>
-        <input type="text" class="form-control" #inputSalario disabled>
-    </div> -->
+    <!-- <div class="col-md-7"> -->
+    <app-input-dados-pessoa *ngIf="pessoaSelecionada"></app-input-dados-pessoa>
+    <!-- <label>Matricula</label>
+      <input type="text" class="form-control" #inputMatricula disabled>
+      <label>Nome</label>
+      <input type="text" class="form-control" #inputNome disabled>
+      <label>Salario</label>
+      <input type="text" class="form-control" #inputSalario disabled> -->
   </div>
+  <!-- </div> -->
 </div>

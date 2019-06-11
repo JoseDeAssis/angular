@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { ContatosListagemComponent } from './contatos-listagem/contatos-listagem.component';
@@ -26,7 +27,8 @@ import { inputDadosPessoaComponent } from './list-box/input-dados-pessoa/input-d
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ ContatoService, TrocaDadosService ],
   bootstrap: [AppComponent]

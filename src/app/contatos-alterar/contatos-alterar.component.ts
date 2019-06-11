@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, ViewChild, ElementRef, OnChanges, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ContatoService } from '../contato.service';
 import { TrocaDadosService } from '../troca-dados.service';
 
@@ -9,7 +9,7 @@ import { TrocaDadosService } from '../troca-dados.service';
 })
 export class ContatosAlterarComponent implements OnInit {
 
-  pessoa = {};
+  pessoa;
   @ViewChild("inputMatricula", {static: false}) inputMatricula: ElementRef;
   @ViewChild("inputNome", {static: false}) inputNome: ElementRef;
   @ViewChild("inputSalario", {static: false}) inputSalario: ElementRef;
