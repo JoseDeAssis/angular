@@ -31,4 +31,8 @@ export class ContatoService {
   transferirDados(filtro): Observable<any> { 
     return this.http.post<any>(this.contatosUrl, filtro);
   }
+
+  buscarPessoa(filtro): Observable<any> { 
+    return this.http.post<any>(this.contatosUrl, filtro);
+  }
 }

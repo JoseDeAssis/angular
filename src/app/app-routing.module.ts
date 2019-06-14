@@ -6,13 +6,15 @@ import { ContatosListagemComponent } from './contatos-listagem/contatos-listagem
 import { ContatosAlterarComponent } from './contatos-alterar/contatos-alterar.component';
 import { ContatosDeletarComponent } from './contatos-deletar/contatos-deletar.component';
 import { InputTrocaDadosComponent } from './input-troca-dados/input-troca-dados.component';
+import { ContatosBuscaComponent } from './contatos-busca/contatos-busca.component';
 
 const routes: Routes = [
   { path: '', component: ContatosListagemComponent },
   { path: 'inserir', component: ContatosInserirComponent },
   { path: 'alterar', component: ContatosAlterarComponent },
   { path: 'deletar', component: ContatosDeletarComponent },
-  { path: 'transferirDadosInput', component: InputTrocaDadosComponent }
+  { path: 'transferirDadosInput', component: InputTrocaDadosComponent },
+  { path: 'buscar', component: ContatosBuscaComponent }
 ];
 
 @NgModule({

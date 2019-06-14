@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TrocaDadosService } from './troca-dados.service';
 import { inputDadosPessoaComponent } from './list-box/input-dados-pessoa/input-dados-pessoa.component';
 import { InputTrocaDadosComponent } from './input-troca-dados/input-troca-dados.component';
+import { ContatosBuscaComponent } from './contatos-busca/contatos-busca.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InputTrocaDadosComponent } from './input-troca-dados/input-troca-dados.
     ContatosAlterarComponent,
     ListBoxComponent,
     inputDadosPessoaComponent,
-    InputTrocaDadosComponent
+    InputTrocaDadosComponent,
+    ContatosBuscaComponent
   ],
   imports: [
     BrowserModule,
